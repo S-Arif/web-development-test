@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@lang('admin.app.name')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -62,10 +62,22 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        @if(session('lang') == 'ur')
+            <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+            <style>
+                *{
+                    font-family: 'Amiri', serif;
+                }
+                body{
+                    text-align: right;
+                }
+            </style>
+        @endif
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            {{--@if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -77,24 +89,29 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif--}}
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    @lang('admin.app.name')
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('admin.home') }}">@lang('admin.redirect_message')</a>
                 </div>
             </div>
         </div>
     </body>
 </html>
+<script>
+    (function(){
+        let timeLeft = 10;
+        let interval = window.setInterval( () => {
+            if(timeLeft <= 0) {
+                clearInterval(interval);
+                document.querySelector('a').click();
+            }
+            document.getElementById('secondContainer').innerHTML = (timeLeft--).toString();
+        }, 1000);
+    })();
+</script>

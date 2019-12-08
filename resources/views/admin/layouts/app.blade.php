@@ -19,17 +19,17 @@
     @if(session()->has('message'))
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     @endif
-    <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
-    <style>
-        *{
-            font-family: 'Amiri', serif;
-        }
-        @if(__('admin.direction') === 'rtl')
+    @if(session('lang') == 'ur')
+        <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Amiri', serif;
+            }
             body{
                 text-align: right;
             }
-        @endif
-    </style>
+        </style>
+    @endif
 </head>
 <body>
     <div id="app">

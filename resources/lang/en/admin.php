@@ -47,8 +47,9 @@ return [
     'login' => 'Login',
     'remember_me' => 'Remember me?',
     'forgot_your_password' => 'Forgot your password?',
-    'password_reset' => 'Reset password',
+    'reset_password' => 'Reset password',
     'send_password_reset_link' => 'Send password reset link',
     'email_trouble' => 'If you\'re having trouble clicking the \":actionText\" button, copy and paste the URL below<br>
     into your web browser: [:actionURL](:actionURL)',
+    'redirect_message' => 'go to admin panel by clicking here or it will redirect you automatically in <span id="secondContainer">10</span> seconds'
 ];
