@@ -49,3 +49,9 @@ use this credentials to logging in to server
 email: admin@admin.com
 password: password
 ```
+
+Lastly make sure to link your storage symbolic link by mentioned command
+
+```blade
+php artisan storage:link
+```
