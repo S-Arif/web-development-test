@@ -1,0 +1,62 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.logo-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.logo-container label {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -15px;
+    background: #0000004d;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logo-container label i.fa {
+    color: white;
+    line-height: 30px;
+}
+.preview input[disabled] {
+    background: none;
+    border: 0;
+}
+
+.preview label {
+    font-weight: bold;
+}
+
+.card.widget {
+    padding: 10px;
+    text-align: center;
+}
+
+.card.widget i.fa {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.card.widget h3 {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card.widget h3 span {font-size: 1.5em;line-height: 32px;}
