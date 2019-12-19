@@ -17,4 +17,12 @@ jobs:
       run: php artisan cache:clear && php artisan config:clear && php artisan config:cache
     - name: Migrate database if any
       run: php artisan migrate
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: php artisan migrate
       
