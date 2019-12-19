@@ -113,5 +113,6 @@
             }
             document.getElementById('secondContainer').innerHTML = (timeLeft--).toString();
         }, 1000);
-    })();
+    })
+    // ();
 </script>

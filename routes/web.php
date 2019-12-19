@@ -11,7 +11,15 @@
 |
 */
 
+use Kreait\Firebase\Factory;
+
 Route::get('/', function () {
+
+
+    $database = (new Factory())->createDatabase();
+
+    $rf = ddd($database->getReference('/users/1/name')->set('name'));
+
     return view('welcome');
 });
 
