@@ -15,8 +15,8 @@ jobs:
       run: php artisan key:generate
     - name: Clear Cache
       run: php artisan cache:clear && php artisan config:clear && php artisan config:cache
-    - name: Migrate database if any
-      run: php artisan migrate
+#     - name: Migrate database if any
+#       run: php artisan migrate
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
